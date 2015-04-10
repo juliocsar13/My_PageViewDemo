@@ -21,8 +21,11 @@ public class MainActivity extends ActionBarActivity {
     private ViewPager viewPager;
     private LinearLayout page1;
     private LinearLayout page2;
-    private ListView page3;
+    private LinearLayout page3;
     private LinearLayout page4;
+    private LinearLayout page5;
+    private LinearLayout page6;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public int getCount() {
-            return 4;
+            return 6;
         }
         @Override
         public Object instantiateItem(ViewGroup collection, int position)
@@ -81,17 +84,33 @@ public class MainActivity extends ActionBarActivity {
                 case 2:
                     if (page3 == null)
                     {
-                        page3 = (ListView) LayoutInflater.from(MainActivity.this).inflate(R.layout.page_three, null);
-                        initListView();
+                        page3 = (LinearLayout) LayoutInflater.from(MainActivity.this).inflate(R.layout.page_three, null);
+
                     }
                     page = page3;
                     break;
-                default:
+                case 3:
                     if (page4 == null)
                     {
                         page4 = (LinearLayout) LayoutInflater.from(MainActivity.this).inflate(R.layout.page_four, null);
+
                     }
                     page = page4;
+                    break;
+                case 4:
+                    if (page5 == null)
+                    {
+                        page5 = (LinearLayout) LayoutInflater.from(MainActivity.this).inflate(R.layout.page_five, null);
+
+                    }
+                    page = page5;
+                    break;
+                default:
+                    if (page6 == null)
+                    {
+                        page6 = (LinearLayout) LayoutInflater.from(MainActivity.this).inflate(R.layout.page_six, null);
+                    }
+                    page = page6;
                     break;
             }
 
@@ -108,7 +127,7 @@ public class MainActivity extends ActionBarActivity {
         {
             ((ViewPager) collection).removeView((View) view);
         }
-        private void initListView()
+      /*  private void initListView()
         {
 
             String[] items = new String[50];
@@ -126,7 +145,7 @@ public class MainActivity extends ActionBarActivity {
                 }
             });
 
-        }
+        }*/
     }
 
 }
