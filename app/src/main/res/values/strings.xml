@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My_PageViewDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="two">Page number two</string>
+    <string name="four">Page number four</string>
+    <string name="one">Page number one</string>
+</resources>
