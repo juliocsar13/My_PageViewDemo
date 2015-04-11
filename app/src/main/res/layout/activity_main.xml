@@ -19,6 +19,7 @@
     tools:context=".MainActivity">
 
     <com.viewpagerindicator.TitlePageIndicator
+
         android:id="@+id/indicator"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />

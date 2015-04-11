@@ -1,6 +1,7 @@
 package com.example.my_pageviewdemo;
 
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.viewpagerindicator.TitlePageIndicator;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -32,7 +35,9 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         viewPager=(ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(new MainPageAdapter());
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        TitlePageIndicator titleIndicator = (TitlePageIndicator)findViewById(R.id.indicator);
+        titleIndicator.setViewPager(viewPager);
+        titleIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
             public void onPageSelected(int position)
@@ -55,6 +60,29 @@ public class MainActivity extends ActionBarActivity {
     }
     class MainPageAdapter extends PagerAdapter{
 
+        @Override
+        public CharSequence getPageTitle(int position)
+        {
+            String title = null;
+
+            switch (position)
+            {
+                case 0:
+                    title = getString(R.string.one);
+                    break;
+                case 1:
+                    title = getString(R.string.two);
+                    break;
+                case 2:
+                    title = getString(R.string.three);
+                    break;
+
+                default:
+                    title = getString(R.string.four);
+                    break;
+            }
+            return title;
+        }
         @Override
         public int getCount() {
             return 6;
