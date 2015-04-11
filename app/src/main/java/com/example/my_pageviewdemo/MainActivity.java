@@ -52,8 +52,6 @@ public class MainActivity extends ActionBarActivity {
 
             }
         });
-
-
     }
     class MainPageAdapter extends PagerAdapter{
 
