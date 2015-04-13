@@ -16,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.viewpagerindicator.CirclePageIndicator;
+import com.viewpagerindicator.PageIndicator;
 import com.viewpagerindicator.TitlePageIndicator;
 
 
@@ -28,6 +30,7 @@ public class MainActivity extends ActionBarActivity {
     private LinearLayout page4;
     private LinearLayout page5;
     private LinearLayout page6;
+    private PageIndicator mIndicador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +38,10 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         viewPager=(ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(new MainPageAdapter());
-        TitlePageIndicator titleIndicator = (TitlePageIndicator)findViewById(R.id.indicator);
-        titleIndicator.setViewPager(viewPager);
-        titleIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        CirclePageIndicator circleIndicator = (CirclePageIndicator)findViewById(R.id.indicator);
+
+        circleIndicator.setViewPager(viewPager);
+        circleIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
             public void onPageSelected(int position)
@@ -60,7 +64,7 @@ public class MainActivity extends ActionBarActivity {
     }
     class MainPageAdapter extends PagerAdapter{
 
-        @Override
+        /*@Override
         public CharSequence getPageTitle(int position)
         {
             String title = null;
@@ -68,21 +72,26 @@ public class MainActivity extends ActionBarActivity {
             switch (position)
             {
                 case 0:
-                    title = getString(R.string.one);
+                    title = getString(R.string.one_indicator);
                     break;
                 case 1:
-                    title = getString(R.string.two);
+                    title = getString(R.string.two_indicator);
                     break;
                 case 2:
-                    title = getString(R.string.three);
+                    title = getString(R.string.three_indicator);
                     break;
-
+                case 3:
+                    title = getString(R.string.four_indicator);
+                    break;
+                case 4:
+                    title = getString(R.string.five_indicator);
+                    break;
                 default:
-                    title = getString(R.string.four);
+                    title = getString(R.string.six_indicator);
                     break;
             }
             return title;
-        }
+        }*/
         @Override
         public int getCount() {
             return 6;

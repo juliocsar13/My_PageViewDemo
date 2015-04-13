@@ -9,4 +9,11 @@
     <string name="one">Page number one</string>
     <string name="five">Page number five</string>
     <string name="six">Page number six</string>
+    <string name="one_indicator">1</string>
+    <string name="two_indicator">2</string>
+    <string name="three_indicator">3</string>
+    <string name="four_indicator">4</string>
+    <string name="five_indicator">5</string>
+    <string name="six_indicator">6</string>
+
 </resources>
