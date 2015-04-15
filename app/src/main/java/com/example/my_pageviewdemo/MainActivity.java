@@ -10,8 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -36,11 +39,13 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         viewPager=(ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(new MainPageAdapter());
-        CirclePageIndicator circleIndicator = (CirclePageIndicator)findViewById(R.id.indicator);
 
+        CirclePageIndicator circleIndicator = (CirclePageIndicator)findViewById(R.id.indicator);
         circleIndicator.setViewPager(viewPager);
+
         circleIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             @Override
@@ -61,6 +66,11 @@ public class MainActivity extends ActionBarActivity {
 
             }
         });
+
+        ImageView Image = (ImageView) findViewById(R.id.image_animation);
+        Animation animacion = AnimationUtils.loadAnimation(this,R.anim.animation);
+        Image.startAnimation(animacion);
+        finish();
     }
     class MainPageAdapter extends PagerAdapter{
 

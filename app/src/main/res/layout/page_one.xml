@@ -2,24 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:background="@drawable/fondo_pageview1"
+    android:gravity="bottom">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/one"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ffffffff"/>
 
-    <Button
-        android:layout_width="220dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:text="BUTTON"
-        android:textSize="17sp"
-        android:textColor="#ffffffff"/>
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/image_animation"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="120dp" />
+
+
 
 </LinearLayout>

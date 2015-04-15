@@ -18,9 +18,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-
-
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
@@ -38,12 +35,11 @@
         android:layout_width="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        />
+        android:layout_alignParentBottom="true"/>
+
     <!-- <com.viewpagerindicator.TitlePageIndicator
         android:id="@+id/indicator"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         style="@style/CustomTitlePageIndicator"/>-->
-
 </RelativeLayout>
