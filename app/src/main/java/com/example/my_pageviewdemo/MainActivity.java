@@ -1,27 +1,20 @@
 package com.example.my_pageviewdemo;
 
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.Toast;
-
 import com.viewpagerindicator.CirclePageIndicator;
 import com.viewpagerindicator.PageIndicator;
-import com.viewpagerindicator.TitlePageIndicator;
+import java.util.TimerTask;
+import java.util.logging.Handler;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -34,12 +27,22 @@ public class MainActivity extends ActionBarActivity {
     private LinearLayout page5;
     private LinearLayout page6;
     private PageIndicator mIndicador;
+    private android.os.Handler handler;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        handler.postDelayed(new Runnable() {
+            public void run() {
+
+                viewPager.setCurrentItem(viewPager.getCurrentItem()+1, true);
+
+            }
+        },2000);
         viewPager=(ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(new MainPageAdapter());
 
@@ -65,13 +68,19 @@ public class MainActivity extends ActionBarActivity {
             {
 
             }
+
         });
 
-        ImageView Image = (ImageView) findViewById(R.id.image_animation);
-        Animation animacion = AnimationUtils.loadAnimation(this,R.anim.animation);
-        Image.startAnimation(animacion);
-        finish();
+
+
+
+
+
+
     }
+
+
+
     class MainPageAdapter extends PagerAdapter{
 
         /*@Override
@@ -102,6 +111,7 @@ public class MainActivity extends ActionBarActivity {
             }
             return title;
         }*/
+
         @Override
         public int getCount() {
             return 6;
@@ -116,6 +126,7 @@ public class MainActivity extends ActionBarActivity {
                     if (page1 == null)
                     {
                         page1 = (LinearLayout) LayoutInflater.from(MainActivity.this).inflate(R.layout.page_one, null);
+
                     }
                     page = page1;
                     break;
@@ -172,6 +183,15 @@ public class MainActivity extends ActionBarActivity {
         {
             ((ViewPager) collection).removeView((View) view);
         }
+        class UpdateTimeTask extends TimerTask {
+            public void run() {
+                //Code for the viewPager to change view
+            }
+        }
+
+
+
+
       /*  private void initListView()
         {
 

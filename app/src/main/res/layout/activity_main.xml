@@ -26,7 +26,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="20dp"
-        android:background="@drawable/fondo_pageview1"/>
+        android:background="@drawable/julio"/>
 
     <com.viewpagerindicator.CirclePageIndicator
         android:id="@+id/indicator"
