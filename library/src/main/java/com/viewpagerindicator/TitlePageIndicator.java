@@ -705,7 +705,7 @@ public class TitlePageIndicator extends View implements PageIndicator {
     }
 
     @Override
-    public void setViewPager(ViewPager view) {
+    public  void setViewPager(ViewPager view) {
         if (mViewPager == view) {
             return;
         }
@@ -783,7 +783,7 @@ public class TitlePageIndicator extends View implements PageIndicator {
     }
 
     @Override
-    public void setOnPageChangeListener(ViewPager.OnPageChangeListener listener) {
+    public  void setOnPageChangeListener(ViewPager.OnPageChangeListener listener) {
         mListener = listener;
     }
 

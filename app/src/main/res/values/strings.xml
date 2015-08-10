@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My_PageViewDemo</string>
+    <string name="app_name">Akitaxi</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -9,11 +9,22 @@
     <string name="one">Page number one</string>
     <string name="five">Page number five</string>
     <string name="six">Page number six</string>
-    <string name="one_indicator">1</string>
-    <string name="two_indicator">2</string>
-    <string name="three_indicator">3</string>
-    <string name="four_indicator">4</string>
-    <string name="five_indicator">5</string>
-    <string name="six_indicator">6</string>
+    <string name="one_indicator">enero</string>
+    <string name="two_indicator">febrero</string>
+    <string name="three_indicator">marzo</string>
+    <string name="four_indicator">abril</string>
+    <string name="five_indicator">mayo</string>
+    <string name="six_indicator">junio</string>
+    <string name="seven_indicator">julio</string>
+    <string name="eight_indicator">agosto</string>
+    <string name="nine_indicator">septiembre</string>
+    <string name="then_indicator">octubre</string>
+    <string name="elven_indicator">noviembre</string>
+    <string name="twelve_indicator">diciembre</string>
+    <string name="title_activity_history2">History2Activity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 
 </resources>
